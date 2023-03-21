@@ -38,9 +38,6 @@ const Topbar = () => {
             <LightModeOutlinedIcon /> 
           )}
         </IconButton>
-        {<Link to={`/admin/changePassword/`}><IconButton title="Change Password"> 
-            <LockOutlinedIcon />
-        </IconButton></Link>}
         <IconButton title="Logout" onClick={logout}> 
           <LogoutOutlinedIcon />
         </IconButton>
