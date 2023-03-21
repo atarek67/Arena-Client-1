@@ -13,7 +13,7 @@ export default function Login(props) {
   });
   const [showError, setShowError] = useState(false);
   const [isValid, setIsValid] = useState(true);
-  const [isLoading,setIsloading]=useState(false)
+  const [isLoading,setIsloading]=useState(false);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   function getUser(e) {
