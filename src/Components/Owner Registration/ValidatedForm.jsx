@@ -49,19 +49,21 @@ setIsLoading(false);
 
   let validateForm = (e) => {
     e.preventDefault();
+    setIsLoading(true);
     let result = Joi.validate(user, schema, { abortEarly: false });
     const { error } = result;
     if (!error) {
       formSubmit();
     } else {
       setFieldIsEmpty(true);
+      setIsLoading(false);
       const errorData = {};
       for (let users of error.details) {
         const name = users.path[0];
         const message = users.message;
         errorData[name] = message;
       }
-
+setIsLoading(false);
       setError(errorData);
       return errorData;
     }
