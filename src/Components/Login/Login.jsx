@@ -103,7 +103,7 @@ export default function Login(props) {
           </Link>
 
           <div className="d-flex justify-content-center m-5">
-            <button className="btn btn-outline-success col-3 ">
+            <button className="btn btn-outline-success col-6 col-lg-3 ">
               {isLoading ? (
                 <div className="spinner-border" role="status"></div>
               ) : (
