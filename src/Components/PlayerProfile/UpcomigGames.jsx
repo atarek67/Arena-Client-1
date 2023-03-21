@@ -13,7 +13,7 @@ import {
 } from "mdb-react-ui-kit";
 
 export default function UpcomingGames() {
-  const image = "/images/fieldPic/";
+  const image = "https://arena-server.onrender.com/api/images/fieldPic/";
   const [upcoming, setupcoming] = useState([]);
 
   const [counterToUpdate, setCounterToUpdate] = useState(0);
