@@ -13,6 +13,7 @@ export default function Login(props) {
   });
   const [showError, setShowError] = useState(false);
   const [isValid, setIsValid] = useState(true);
+  const [isLoading,setIsLoading]=useState(false);
   
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -39,7 +40,7 @@ export default function Login(props) {
 
   async function formSubmit(e) {
     e.preventDefault();
-    
+    setIsLoading(true);
     let { data, error, body } = await axios
       .post(`/users/login`, user)
       .catch((err) => {
@@ -47,7 +48,7 @@ export default function Login(props) {
       });
 
     if (data.message === "Logged In Successfully") {
-     
+     setIsLoading(false);
       localStorage.setItem("userToken", data.token);
       // getLoginUser()
       let encodedToken = localStorage.getItem("userToken"); //Get the localStorage item by key
@@ -56,12 +57,12 @@ export default function Login(props) {
       /*When the user Logged in successfully call the function getLoginUser();
       To decode the token and save it in the useState*/
       if (userData.role == "Admin") {
-        
+        setIsLoading(false);
         navigate("/admin");
       } else navigate("/");
     } else if (data.message !== "Logged In Successfully") {
       alert("User Not Found or password and Email is wrong");
-      
+      setIsLoading(false);
     }
   }
 
@@ -97,7 +98,7 @@ export default function Login(props) {
           <div className="d-flex justify-content-center m-5">
              <button className="btn btn-outline-success col-lg-3 col-6">
              
-              Loginnnn
+             {isLoading? loading : loginn}
              </button>
           </div>
         </form>
