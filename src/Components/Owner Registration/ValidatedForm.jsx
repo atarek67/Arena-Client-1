@@ -15,6 +15,7 @@ const RegistrationValidation = () => {
   const [showVerify, setshowVerify] = useState(false);
   let [fieldIsEmpty, setFieldIsEmpty] = useState(false);
   const [alreadyTaken, setAlreadyTaken] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
   let schema = {
     // Tarek
     fullName: Joi.string().min(3).max(25).required().regex(/^[a-zA-Z+?\s]{3,25}$/),
@@ -29,18 +30,20 @@ const RegistrationValidation = () => {
   };
   var response;
   async function formSubmit() {
+      setIsLoading(true);
     response = await axios.post(`/fieldOwners/add`, user).catch((e) => {
       console.log(e.response.data);
       console.log("aystring");
       if (e.response.data == "username or email already taken") {
         setAlreadyTaken(true);
-
+setIsLoading(false);
       }
     })
     if (response.data) {
       setshowVerify(true);
       setAlreadyTaken(false);
       setFieldIsEmpty(false);
+      setIsLoading(false);
     }
   }
 
@@ -86,6 +89,7 @@ const RegistrationValidation = () => {
       formSubmit={formSubmit}
       fieldIsEmpty={fieldIsEmpty}
       alreadyTaken={alreadyTaken}
+isLoading={isLoading}
     />
   );
 };
