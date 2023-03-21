@@ -97,7 +97,7 @@ const Sidebar = () => {
               setSelected={setSelected}
             />
             <Item
-              title="Invoices Fields"
+              title="Pending Fields"
               to="/admin/invoices"
               icon={<ReceiptOutlinedIcon />}
               selected={selected}
