@@ -1,0 +1,48 @@
+.SortPrice {
+  border-radius: 12px;
+  width: auto;
+  background: green;
+  color: white;
+  padding: 5px;
+  border: none;
+
+}
+
+.sort {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.SortPrice:hover {
+  background-color: rgb(0, 84, 0);
+}
+
+.form-control:focus {
+  border-color: #28a745;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+
+
+
+@media (max-width: 767.98px) {
+  .border-sm-start-none {
+    border-left: none !important;
+  }
+
+  .search {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .search {
+    width: 85%;
+  }
+}
+/* .aaa{
+  display: grid;
+ grid-template-rows: min-content;
+} */

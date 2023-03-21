@@ -1,0 +1,17 @@
+.mySpan{
+    color: green;
+}
+
+.myCards{
+    display: flex;
+    justify-content: space-around;
+}
+
+.textcard{
+    font-family:  'Poppins';
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

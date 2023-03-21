@@ -1,0 +1,14 @@
+.inputs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    margin: 30px;
+}
+
+.change{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    margin-left: 15px;
+}

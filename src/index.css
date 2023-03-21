@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap");
+
+html,
+body,
+#root,
+.app,
+.content {
+  height: 100%;
+  width: 100%;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+
+
+.divBtn{
+margin-left: 266px;
+margin-bottom: 10px;
+
+}
+
+.app {
+  display: flex;
+  position: relative;
+}
+
+.fontTik {
+  font-family: 'Poppins';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+p,
+div {
+  font-family: 'Poppins';
+
+}
+
+.preview {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.cardImage {
+  width: auto;
+  height: 300px;
+}
+
+.cardImageForField {
+  width: auto;
+  height: 239px;
+}
+
+.tasbet {
+  resize: none;
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+  background: #e0e0e0;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.tikform:hover {
+  border-color: #28a745;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+.tikform:focus {
+  border-color: #28a745;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+.tikform {
+  border-color: #28a745;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
