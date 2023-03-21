@@ -204,13 +204,13 @@ const RegistrationForm = ({
                       </div>
                     )}
                     <div className="m-4 d-flex justify-content-center ">
-                      <input
-                        type="submit"
-                        value=                    {isLoading ? <div className="spinner-border" role="status">
-                        </div> : t("Register")}
-                        className="btn btn-outline-success"
-                        onClick={validateForm}
-                      />
+                     <button className="btn btn-outline-success col-3 " type="submit" onClick={validateForm}>
+                      {isLoading ? (
+                        <div className="spinner-border" role="status"></div>
+                      ) : (
+                        t("Register")
+                      )}
+                    </button>
                     </div>
                     {showVerify && <><div className="bg-warning text-center p-1 h5 rounded-pill">{t("Please Check Your Email for Verification")}</div></>}
                   </form>
