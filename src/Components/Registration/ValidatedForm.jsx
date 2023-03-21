@@ -19,6 +19,7 @@ const RegistrationValidation = () => {
   let [fieldIsEmpty, setFieldIsEmpty] = useState(false)
   const [showVerify, setshowVerify] = useState(false);
   const [alreadyTaken, setAlreadyTaken] = useState(false);
+  const [isLoading,setIsLoading]=useState(false);
 
   const navigate = useNavigate();
   //Tarek
@@ -71,6 +72,7 @@ const RegistrationValidation = () => {
 
   let validateForm = (e) => {
     e.preventDefault();
+    setIsLoading(true);
     let result = Joi.validate(user, schema, { abortEarly: false });
     const { error } = result;
     if (!error) {
@@ -82,8 +84,9 @@ const RegistrationValidation = () => {
         const name = users.path[0];
         const message = users.message;
         errorData[name] = message;
+        setIsLoading(false);
       }
-
+setIsLoading(false);
       setError(errorData);
       console.log(errorData);
       return errorData;
@@ -113,6 +116,7 @@ const RegistrationValidation = () => {
         formSubmit={formSubmit}
         fieldIsEmpty={fieldIsEmpty}
         alreadyTaken={alreadyTaken}
+isLoading={isLoading}
       />
     </div>
   );
