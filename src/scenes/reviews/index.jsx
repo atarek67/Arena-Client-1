@@ -19,7 +19,7 @@ const Reviews = () => {
 
   return (
     <Box m="20px">
-      <Header title="Complains" />
+      <Header title="Reviews" />
       <Box
         m="40px 0 0 0"
         height="50vh"
