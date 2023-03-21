@@ -101,7 +101,7 @@ setIsLoading(true)
 //             </button>
              <button className='btn btn-outline-info col-3 '>
                         {isLoading ? <div className="spinner-border" role="status">
-                        </div> : "Login"}
+                        </div> : "Loginn"}
                     </button>
              
           </div>
