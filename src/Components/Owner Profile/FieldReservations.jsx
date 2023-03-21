@@ -9,7 +9,7 @@ import { useTranslation } from 'react-i18next';
 
 const FieldReservations = () => {
   const [t, i18n] = useTranslation();
-  const image = "/images/fieldPic/";
+  const image = "https://arena-server.onrender.com/api/images/fieldPic/";
   const [index, setIndex] = useState(0);
 
 
