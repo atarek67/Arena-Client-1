@@ -7,7 +7,7 @@ import ReservationForm from "./ReservationForm";
 import Carousel from "react-bootstrap/Carousel";
 import { useTranslation } from 'react-i18next';
 export default function CourtDetails() {
-  const image = "/images/fieldPic/";
+  const image = "https://arena-server.onrender.com/api/images/fieldPic/";
   const [t, i18n] = useTranslation();
   let field = useLoaderData();
   const [index, setIndex] = useState(0);
