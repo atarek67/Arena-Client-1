@@ -7,7 +7,7 @@ import jwtDecode from 'jwt-decode';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 const UpdateFieldForm = ({ fieldToUpdate, setShowUpdateForm, setFieldToUpdate, setCounterToUpdate }) => {
-  const image = "/images/fieldPic/";
+  const image = "https://arena-server.onrender.com/api/images/fieldPic/";
   const [t, i18n] = useTranslation();
 
   let OwnerToken = localStorage.getItem("userToken");
