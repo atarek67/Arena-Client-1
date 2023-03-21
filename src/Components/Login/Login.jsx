@@ -47,6 +47,7 @@ export default function Login(props) {
       .post(`/users/login`, user)
       .catch((err) => {
         setShowError(true);
+         setIsLoading(false);
       });
 
     if (data.message === "Logged In Successfully") {
