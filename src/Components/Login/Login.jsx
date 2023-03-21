@@ -39,14 +39,15 @@ export default function Login(props) {
 
   async function formSubmit(e) {
     e.preventDefault();
-    setIsLoading(true)
+    
     let { data, error, body } = await axios
       .post(`/users/login`, user)
       .catch((err) => {
         setShowError(true);
       });
-
+setIsLoading(true)
     if (data.message === "Logged In Successfully") {
+      setIsLoading(false)
       localStorage.setItem("userToken", data.token);
       // getLoginUser()
       let encodedToken = localStorage.getItem("userToken"); //Get the localStorage item by key
@@ -94,10 +95,15 @@ export default function Login(props) {
           </Link>
 
           <div className="d-flex justify-content-center m-5">
-            <button className="btn btn-outline-success col-lg-3 col-6">
+//             <button className="btn btn-outline-success col-lg-3 col-6">
 //               {t("Login")}
-              {isLoading? "loadingggg": t"Login"}
-            </button>
+//               {isLoading? "loadingggg": "Login"}
+//             </button>
+             <button className='btn btn-outline-info col-3 '>
+                        {isLoading ? <div className="spinner-border" role="status">
+                        </div> : "Login"}
+                    </button>
+             
           </div>
         </form>
       </div>
