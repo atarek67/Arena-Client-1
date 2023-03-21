@@ -13,7 +13,7 @@ export default function Login(props) {
   });
   const [showError, setShowError] = useState(false);
   const [isValid, setIsValid] = useState(true);
-  const [isLoading,setIsloading]=useState(false);
+  
   const navigate = useNavigate();
   const dispatch = useDispatch();
   function getUser(e) {
@@ -45,9 +45,9 @@ export default function Login(props) {
       .catch((err) => {
         setShowError(true);
       });
-setIsLoading(true)
+
     if (data.message === "Logged In Successfully") {
-      setIsLoading(false)
+     
       localStorage.setItem("userToken", data.token);
       // getLoginUser()
       let encodedToken = localStorage.getItem("userToken"); //Get the localStorage item by key
@@ -56,12 +56,12 @@ setIsLoading(true)
       /*When the user Logged in successfully call the function getLoginUser();
       To decode the token and save it in the useState*/
       if (userData.role == "Admin") {
-        setIsLoading(false)
+        
         navigate("/admin");
       } else navigate("/");
     } else if (data.message !== "Logged In Successfully") {
       alert("User Not Found or password and Email is wrong");
-      setIsLoading(false)
+      
     }
   }
 
@@ -97,7 +97,7 @@ setIsLoading(true)
           <div className="d-flex justify-content-center m-5">
              <button className="btn btn-outline-success col-lg-3 col-6">
              
-               {isLoading? "loadingggg": "Loginnn"}
+              "Loginnnn"
              </button>
           </div>
         </form>
