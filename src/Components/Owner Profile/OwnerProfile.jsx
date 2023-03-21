@@ -25,7 +25,7 @@ const OwnerProfile = () => {
   const [formIsVisible, setFormIsVisible] = useState(false);
   const [updateFormIsVisible, setUpdateFormIsVisible] = useState(false);
   const [userInfo, setuserInfo] = useState()
-  const image = "/images/fieldOwnerPic/";
+  const image = "https://arena-server.onrender.com/api/images/fieldOwnerPic/";
 
   function addField() {
     setFormIsVisible(true);
