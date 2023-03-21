@@ -4,7 +4,7 @@ import axios from "axios";
 
 import { useDispatch } from "react-redux";
 import jwtDecode from "jwt-decode";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 export default function Login(props) {
   const [t, i18n] = useTranslation();
   let [user, setUser] = useState({
@@ -13,8 +13,7 @@ export default function Login(props) {
   });
   const [showError, setShowError] = useState(false);
   const [isValid, setIsValid] = useState(true);
-  const [isLoading,setIsLoading]=useState(false);
-  
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   function getUser(e) {
@@ -24,12 +23,15 @@ export default function Login(props) {
 
         let myUser = { ...user };
         myUser[e.target.name] = e.target.value;
-        let userWithEmail = { email: myUser.userName, password: myUser.password };
+        let userWithEmail = {
+          email: myUser.userName,
+          password: myUser.password,
+        };
         setUser(userWithEmail);
       } else {
         let myUser = { ...user };
         myUser[e.target.name] = e.target.value;
-        setUser(myUser)
+        setUser(myUser);
       }
     } else {
       let myUser = { ...user };
@@ -48,7 +50,6 @@ export default function Login(props) {
       });
 
     if (data.message === "Logged In Successfully") {
-     setIsLoading(false);
       localStorage.setItem("userToken", data.token);
       // getLoginUser()
       let encodedToken = localStorage.getItem("userToken"); //Get the localStorage item by key
@@ -56,20 +57,25 @@ export default function Login(props) {
       dispatch({ type: "setLoggedInUser", payload: userData });
       /*When the user Logged in successfully call the function getLoginUser();
       To decode the token and save it in the useState*/
+      setIsLoading(false);
       if (userData.role == "Admin") {
         setIsLoading(false);
+
         navigate("/admin");
       } else navigate("/");
     } else if (data.message !== "Logged In Successfully") {
-      alert("User Not Found or password and Email is wrong");
       setIsLoading(false);
+
+      alert("User Not Found or password and Email is wrong");
     }
   }
 
   return (
     <>
       <div className="w-50 mx-auto ">
-        <h1 className="texttik m-4 d-flex justify-content-center">{t("Loginnnnn")}</h1>
+        <h1 className="texttik m-4 d-flex justify-content-center">
+          {t("Login")}
+        </h1>
 
         <form onSubmit={formSubmit}>
           <input
@@ -96,10 +102,13 @@ export default function Login(props) {
           </Link>
 
           <div className="d-flex justify-content-center m-5">
-           <button className='btn btn-outline-info col-3 '>
-                        {loading ? <div className="spinner-border" role="status">
-                        </div> : "Login"}
-                    </button>
+            <button className="btn btn-outline-info col-3 ">
+              {isLoading ? (
+                <div className="spinner-border" role="status"></div>
+              ) : (
+                t("Login")
+              )}
+            </button>
           </div>
         </form>
       </div>
