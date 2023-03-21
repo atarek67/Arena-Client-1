@@ -10,7 +10,7 @@ import Header from "../../Components/Header";
 import "../../Styles/Style.css";
 import { ManageAccountsOutlined } from "@mui/icons-material";
 const FieldOwnerDetails = () => {
-  const image = "/images/fieldOwnerPic/";
+  const image = "https://arena-server.onrender.com/api/images/fieldOwnerPic/";
   const navigate = useNavigate();
   let { fieldOwnerID } = useParams();
   const [fieldOwner, setFieldOwner] = useState("");
