@@ -153,6 +153,9 @@ export default function MyFields() {
                                   setFieldToUpdate(f);
                                 }}
                               />
+                          
+                            </div>
+                          )}
                               <input
                                 className="btn btn-outline-danger col-9 mb-1"
                                 type="button"
@@ -178,8 +181,6 @@ export default function MyFields() {
                                 }
                                 }
                               />
-                            </div>
-                          )}
                           {/* medhat */}
                           {/* Icon insetad of Button */}
 
