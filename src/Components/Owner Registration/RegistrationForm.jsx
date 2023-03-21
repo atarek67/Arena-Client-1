@@ -204,7 +204,7 @@ const RegistrationForm = ({
                       </div>
                     )}
                     <div className="m-4 d-flex justify-content-center ">
-                     <button className="btn btn-outline-success col-3 " type="submit" onClick={validateForm}>
+                     <button className="btn btn-outline-success col-6 col-lg-3 " type="submit" onClick={validateForm}>
                       {isLoading ? (
                         <div className="spinner-border" role="status"></div>
                       ) : (
