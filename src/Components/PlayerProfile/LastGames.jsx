@@ -14,7 +14,7 @@ import {
 } from "mdb-react-ui-kit";
 
 export default function LastGames() {
-  const image = "/images/fieldPic/";
+  const image = "https://arena-server.onrender.com/api/images/fieldPic/";
   // console.log(image)
   const [myGames, setMyGames] = useState([]);
   const [fields, setFields] = useState([]);
