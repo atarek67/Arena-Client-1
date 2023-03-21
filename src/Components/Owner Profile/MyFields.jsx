@@ -18,7 +18,7 @@ import UpdateFieldForm from "./UpdateFieldForm";
 import { useTranslation } from 'react-i18next';
 
 export default function MyFields() {
-  const image = "/images/fieldPic/";
+  const image = "https://arena-server.onrender.com/api/images/fieldPic/";
 
   const [t, i18n] = useTranslation();
 
