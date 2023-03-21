@@ -17,7 +17,7 @@ import axios from 'axios';
 
 export default function MainProfile() {
   const [t, i18n] = useTranslation();
-  const image = "/images/playerPic/";
+  const image = "https://arena-server.onrender.com/api/images/playerPic/";
   let [PlayerUpdateFormIsVisible, setPlayerUpdateFormIsVisible] = useState(false)
   let playerToken = localStorage.getItem("userToken");
   let playerData = jwtDecode(playerToken);
