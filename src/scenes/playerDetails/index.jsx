@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 import Header from "../../Components/Header";
 import "../../Styles/Style.css";
 const PlayerDetails = () => {
-  const image = "/images/playerPic/";
+  const image = "https://arena-server.onrender.com/api/images/playerPic/";
   const navigate = useNavigate();
   let { playerID } = useParams();
   const [player, setPlayer] = useState("");
