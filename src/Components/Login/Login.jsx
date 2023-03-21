@@ -95,12 +95,10 @@ setIsLoading(true)
           </Link>
 
           <div className="d-flex justify-content-center m-5">
-
-             <button className='btn btn-outline-info col-3 '>
-                        {isLoading ? <div className="spinner-border" role="status">
-                        </div> : "Loginn"}
-                    </button>
+             <button className="btn btn-outline-success col-lg-3 col-6">
              
+               {isLoading? "loadingggg": "Loginnn"}
+             </button>
           </div>
         </form>
       </div>
