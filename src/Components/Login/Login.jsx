@@ -97,7 +97,7 @@ export default function Login(props) {
           <div className="d-flex justify-content-center m-5">
              <button className="btn btn-outline-success col-lg-3 col-6">
              
-              "Loginnnn"
+              Loginnnn
              </button>
           </div>
         </form>
