@@ -68,7 +68,7 @@ setIsLoading(true)
   return (
     <>
       <div className="w-50 mx-auto ">
-        <h1 className="texttik m-4 d-flex justify-content-center">{t("Login")}</h1>
+        <h1 className="texttik m-4 d-flex justify-content-center">{t("Loginnnnn")}</h1>
 
         <form onSubmit={formSubmit}>
           <input
