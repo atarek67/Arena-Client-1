@@ -14,7 +14,8 @@ const RegistrationForm = ({
   setUser,
   formSubmit,
   fieldIsEmpty,
-  alreadyTaken
+  alreadyTaken,
+  isLoading
 }) => {
   let [inputIsTouched, setInputIsTouched] = useState(false);
 
@@ -205,7 +206,8 @@ const RegistrationForm = ({
                     <div className="m-4 d-flex justify-content-center ">
                       <input
                         type="submit"
-                        value={t("Register")}
+                        value=                    {isLoading ? <div className="spinner-border" role="status">
+                        </div> : t("Register")}
                         className="btn btn-outline-success"
                         onClick={validateForm}
                       />
