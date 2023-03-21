@@ -158,7 +158,7 @@ export default function MyFields() {
                           )}
                           <div className="text-center">
                               <input
-                                className="btn btn-outline-danger col-9 mb-1"
+                                className="btn btn-outline-danger text-center col-9 mb-1"
                                 type="button"
                                 value={t("Delete Field")}
                                 onClick={() => {
