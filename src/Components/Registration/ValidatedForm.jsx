@@ -59,13 +59,16 @@ const RegistrationValidation = () => {
       console.log("aystring");
       if (e.response.data == "username or email already taken") {
         setAlreadyTaken(true);
+        setIsLoading(false);
       }
     })
     if (response.data) {
+      setIsLoading(false);
       setshowVerify(true);
       setAlreadyTaken(false);
       setFieldIsEmpty(false)
     }
+    setIsLoading(false);
   }
   console.log(response);
 
