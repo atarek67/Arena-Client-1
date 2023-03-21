@@ -115,6 +115,10 @@ const OwnerProfile = () => {
                       // src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp"
                       src={`${image}/${userInfo?.image}`}
                       alt="avatar"
+                      onError={({ currentTarget }) => {
+                      currentTarget.onerror = null;
+                        currentTarget.src ="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/1200px-Default_pfp.svg.png";
+                    }}
                       className="rounded-circle"
                       style={{ width: "150px" }}
                       fluid
