@@ -37,7 +37,7 @@ const FieldsInvoices = () => {
 
   return (
     <Box m="20px">
-      <Header title="FEILDS" subtitle="Managing The Invalid Fields" />
+      <Header title="FEILDS" subtitle="Managing pending fields" />
       <Box
         m="40px 0 0 0"
         height="75vh"
